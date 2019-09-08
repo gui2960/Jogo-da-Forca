@@ -14,41 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/DesenhoForca/0.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Aulas/6%C2%B0%20SEMESTRE/PDS%20-%20Paulynne/Jogo%20da%20Velha/Jogo%20da%20Forca/bin/DesenhoForca/0.png</locationURI>
-		</link>
-		<link>
-			<name>src/DesenhoForca/1.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Aulas/6%C2%B0%20SEMESTRE/PDS%20-%20Paulynne/Jogo%20da%20Velha/Jogo%20da%20Forca/bin/DesenhoForca/1.png</locationURI>
-		</link>
-		<link>
-			<name>src/DesenhoForca/2.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Aulas/6%C2%B0%20SEMESTRE/PDS%20-%20Paulynne/Jogo%20da%20Velha/Jogo%20da%20Forca/bin/DesenhoForca/2.png</locationURI>
-		</link>
-		<link>
-			<name>src/DesenhoForca/3.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Aulas/6%C2%B0%20SEMESTRE/PDS%20-%20Paulynne/Jogo%20da%20Velha/Jogo%20da%20Forca/bin/DesenhoForca/3.png</locationURI>
-		</link>
-		<link>
-			<name>src/DesenhoForca/4.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Aulas/6%C2%B0%20SEMESTRE/PDS%20-%20Paulynne/Jogo%20da%20Velha/Jogo%20da%20Forca/bin/DesenhoForca/4.png</locationURI>
-		</link>
-		<link>
-			<name>src/DesenhoForca/5.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Aulas/6%C2%B0%20SEMESTRE/PDS%20-%20Paulynne/Jogo%20da%20Velha/Jogo%20da%20Forca/bin/DesenhoForca/5.png</locationURI>
-		</link>
-		<link>
-			<name>src/DesenhoForca/6.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Aulas/6%C2%B0%20SEMESTRE/PDS%20-%20Paulynne/Jogo%20da%20Velha/Jogo%20da%20Forca/bin/DesenhoForca/6.png</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

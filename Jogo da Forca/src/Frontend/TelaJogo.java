@@ -25,8 +25,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import java.awt.event.KeyAdapter;
 
 public class TelaJogo extends JFrame {
 	private StringBuilder palavraescondida = new StringBuilder();
@@ -88,22 +90,15 @@ public class TelaJogo extends JFrame {
 		JButton btnTentar = new JButton("TENTAR");
 		btnTentar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String letra = letrainput.getText().toUpperCase();
-				if(letra.length() > 1) {
-					JOptionPane.showMessageDialog(null, "Mais de uma letra foi inserida!");
-				}
-				else if (!letrastentadas.contains(letra)){
-					try {
-						revelaLetra(letra);
-					} catch (IOException e1) {
-						
-						e1.printStackTrace();
-					}
-					letrainput.setText("");
-				}
-				else {
-					System.out.println("Já tem");
-					letrastentadas.add(letra);
+				testa_letra();
+			}
+		});
+		
+		letrainput.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+					testa_letra();
 				}
 			}
 		});
@@ -248,6 +243,26 @@ public class TelaJogo extends JFrame {
 	 */
 	public void desenhaBoneco (int n) {
 		imgforca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/DesenhoForca/" + n + ".png")));
+	}
+	
+	public void testa_letra() {
+		String letra = letrainput.getText().toUpperCase();
+		if(letra.length() > 1) {
+			JOptionPane.showMessageDialog(null, "Mais de uma letra foi inserida!");
+		}
+		else if (!letrastentadas.contains(letra)){
+			try {
+				revelaLetra(letra);
+			} catch (IOException e1) {
+				
+				e1.printStackTrace();
+			}
+			letrainput.setText("");
+		}
+		else {
+			System.out.println("Já tem");
+			letrastentadas.add(letra);
+		}
 	}
 
 }
