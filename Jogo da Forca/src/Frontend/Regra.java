@@ -7,6 +7,9 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Backend.Jogo;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JButton;
@@ -18,6 +21,10 @@ import java.io.IOException;
 import java.awt.event.ActionEvent;
 
 public class Regra extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static Regra frame = new Regra();
 	private JPanel contentPane;
 
@@ -25,6 +32,18 @@ public class Regra extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		try {
+			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+				if ("Nimbus".equals(info.getName())) {
+					javax.swing.UIManager.setLookAndFeel(info.getClassName());
+					break;
+				}
+			}
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
+				| javax.swing.UnsupportedLookAndFeelException ex) {
+			System.err.println(ex);
+		}
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -53,6 +72,8 @@ public class Regra extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				TelaJogo telaJogo;
 				try {
+					Jogo jogo = new Jogo();
+					jogo.carregar_palavras();
 					telaJogo = new TelaJogo();
 					telaJogo.setVisible(true);
 					telaJogo.setLocation(((Toolkit.getDefaultToolkit().getScreenSize().width  / 2) - (telaJogo.getWidth() / 2)), 

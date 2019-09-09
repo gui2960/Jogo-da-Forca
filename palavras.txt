@@ -1,1 +1,8 @@
-teste
+exemplo
+de
+como
+adicionar
+as
+palavras
+ao
+arquivo

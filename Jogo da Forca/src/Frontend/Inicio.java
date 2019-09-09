@@ -10,6 +10,9 @@ import java.awt.Toolkit;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+
+import Backend.Jogo;
+
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
@@ -26,7 +29,7 @@ public class Inicio {
 	public static void main(String[] args) {
 		try {
 			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-				if ("Windows".equals(info.getName())) {
+				if ("Nimbus".equals(info.getName())) {
 					javax.swing.UIManager.setLookAndFeel(info.getClassName());
 					break;
 				}
@@ -74,6 +77,8 @@ public class Inicio {
 			public void actionPerformed(ActionEvent e) {
 				TelaJogo telaJogo;
 				try {
+					Jogo jogo = new Jogo();
+					jogo.carregar_palavras();
 					telaJogo = new TelaJogo();
 					telaJogo.setVisible(true);
 					telaJogo.setLocation(((Toolkit.getDefaultToolkit().getScreenSize().width  / 2) - (telaJogo.getWidth() / 2)), 
